@@ -16,4 +16,5 @@ Download new chrome && run tests from example folder
 ```
 
 **Note**: test run command is `mvn test -Dtest=*`. If you are using different project management tool than Maven, just change this line in `run-tests.sh`.
+
 **Requirements**: for run example you need wget, unzip, docker

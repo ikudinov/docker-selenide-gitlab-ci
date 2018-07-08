@@ -9,6 +9,8 @@ RUN apt-get update \
     && apt-get update \
     && apt-get install $(apt-cache depends google-chrome-stable | grep Depends | sed "s/.*ends:\ //" | tr '\n' ' ') -y --no-install-recommends
 
+RUN apt-get install -yq git unzip
+
 # Aptitude cleanup
 RUN rm -rf /var/lib/apt/lists/* \
     && apt-get purge --auto-remove -y curl \
